@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavMenuComponent implements OnInit {
   isExpanded = false;
 
-  constructor(private auth: AuthService){}
+  constructor(public auth: AuthService){}
   private urlFromAuth0?: string 
   ngOnInit(){
     this.auth.handleAuthCallback();
